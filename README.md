@@ -10,9 +10,22 @@ This project contains various notes, cheatsheets etc. related to Kubernetes
 
 ## Cheatsheet
 
+### Contexts
+
 | Command | Description |
 |---|---|
 | kubectl config current-context | List the currently selected context |
 | kubectl config get-contexts | List the currently configured contexts |
 | kubectl config use-context NAME | Switch to the context named NAME |
 | kubectl config set-context --current --namespace=NAMESPACE | Set the default namespace to to use when not specified to NAMESPACE |
+
+### Deployments
+| Command | Description |
+|---|---|
+| kubectl get deployments | List all deployments in the current namespace |
+
+### Nodes
+| Command | Description |
+|---|---|
+| kubectl get nodes | List all the current cluster nodes |
+
