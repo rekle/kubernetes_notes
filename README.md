@@ -7,6 +7,7 @@ This project contains various notes, cheatsheets etc. related to Kubernetes
 * [Kubernetes](https://kubernetes.io) - Project homepage
 * [K9S](https://k9scli.io) - Text based GUI (free)
 * [Lens](https://k8slens.dev) - Graphical UI (commercial)
+* [Upgrading Kubernetes Clusters](https://kubernetes.io/docs/tasks/administer-cluster/cluster-upgrade/)
 
 ## Cheatsheet
 
@@ -42,3 +43,12 @@ You can use 'kubectl options' to list common command line options.
 |---|---|
 | kubectl get nodes | List all the current cluster nodes |
 
+## Upgrading Nodes
+
+For each node in the cluster, do the following:
+
+1. Drain the node.  This disables scheduling of pods on the node and deletes all existing pods (which will get recreated on other nodes)
+  a. kubectl drain NODE-NAME --ignore-daemonsets
+2. Upgrade the node to latest version
+3. Re-enable scheduling on the node
+   a. kubectl uncordon NODE-NAME
