@@ -41,7 +41,7 @@ You can use 'kubectl options' to list common command line options.
 ### Nodes
 | Command | Description |
 |---|---|
-| kubectl get nodes | List all the current cluster nodes |
+| kubectl get nodes | List all the current cluster nodes 
 
 ## Upgrading Nodes
 
@@ -52,3 +52,11 @@ For each node in the cluster, do the following:
 2. Upgrade the node to latest version
 3. Re-enable scheduling on the node
    a. kubectl uncordon NODE-NAME
+
+### Common Commands
+| Command | Description |
+|---|---|
+| kubectl proxy & | Run the Proxy.  This lets you connect to a web UI that allows many cluster management tasks |
+| kubectl exec -it POD-NAME -- sh | Open a terminal window and run the 'sh' shell on the pod with the name POD-NAME.  Add '--namespace NAMESPACE' if you want to use a different namespace than the default namespace. |
+
+| Command
